@@ -108,7 +108,7 @@ const Product = () => {
                             <img
                                 className="absolute pl-[9px] pr-[9px] pt-[14px] pb-[14px] m-[49px] object-fit"
                                 src={item.img}
-                                alt={item.text} 
+                                alt={item.text} s
                             />
 
                         </div>
