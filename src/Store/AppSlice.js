@@ -1,14 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import produce from "immer"; // Import the 'produce' function
 
 const initialState = {
     showAllData: false,
-    favourates: [],
-    countFavourate: 0,
+    addCartData: [],
     cartData: [],
+    searchProduct: '',
 };
-
-
 export const AppSlice = createSlice({
     name: 'products',
     initialState,
@@ -16,22 +13,25 @@ export const AppSlice = createSlice({
         handleDataToDisplay: (state) => {
             state.showAllData = !state.showAllData;
         },
-        addtofavourate: (state, action) => {
-            state.favourates.push(action.payload);
+        addtoCart: (state, action) => {
+            state.addCartData = [...state.addCartData, action.payload];
         },
-        removeTofavourate: (state, action) => {
-            state.favourates.push(action.payload);
-            state.countFavourate++;
+        deleteCart: (state, action) => {
+
+            state.addCartData = state.addCartData.filter((item) => item.id !== action.payload)
         },
-        addAllProductsToCart: (state, action) => {
-            produce(state, (draft) => {
-                draft.cartData = [...draft.cartData, ...action.payload];
-            });
+        deletAll: (state, action) => {
+            state.addCartData = []
+        },
+        moveToAllCart: (state, action) => {
+            state.addCartData = action.payload
+        },
+        searchData(state, action) {
+            state.searchProduct = action.payload;
         },
     },
 });
-
-export const { handleDataToDisplay, addtofavourate, removeTofavourate, addAllProductsToCart } = AppSlice.actions;
+export const { handleDataToDisplay, deleteCart, addtoCart, deletAll, moveToAllCart, searchData } = AppSlice.actions;
 export const selectShowAllData = (state) => state.products.showAllData;
-export const selectCartData =(state) => state.products.cartData
+export const selectCartData = (state) => state.products.cartData
 export default AppSlice.reducer;

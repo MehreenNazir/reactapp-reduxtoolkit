@@ -1,3 +1,140 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.icon-red {
+    color: #DB4444;
+}
+
+.medium {
+    display: flex;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.large {
+    display: flex;
+    padding: 16px 48px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.gapOfCart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.width {
+    display: flex;
+    width: 1170px;
+    height: 102px;
+    padding: 24px 39px 24px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: var(--Primary, #FFF);
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+}
+
+.adjustment {
+    display: flex;
+    width: 1170px;
+    height: 72px;
+    padding: 24px 39px 24px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: var(--Primary, #FFF);
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+}
+
+.gapUl {
+    width: 1091px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    gap: 284px;
+}
+
+.space {
+    display: flex;
+    align-items: center;
+    gap: 284px;
+}
+
+.quantitySet {
+    display: flex;
+    width: 72px;
+    height: 44px;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1.5px solid rgba(0, 0, 0, 0.40);
+}
+
+.inner {
+    display: flex;
+    width: 48px;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+
+}
+
+.quantity {
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.form {
+    width: 470px;
+    height: 324px;
+    border-radius: 4px;
+    border: 1.5px solid #000;
+}
+
+.underline {
+    width: 422px;
+    height: 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    opacity: 0.4;
+    width: 422px;
+    height: 1px;
+    color: #000;
+}
+
+/* Responsive Banner */
+.banner {
+    margin-left: "auto";
+        margin-right: "auto";
+        width: "1170px";
+        height: "344px";
+        background-Color: "black";
+        color: "white";
+        flex-shrink: 0;
+        margin: "40px auto 140px";
+}
